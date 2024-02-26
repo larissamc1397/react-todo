@@ -3,10 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+var todoList = [
+  { id: 1, title: "Complete homework" },
+  { id: 2, title: "Prepare for presentation" },
+  { id: 3, title: "Review for Exam" }
+];
+
+
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
 
   return (
+
+    /**
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -31,5 +42,20 @@ function App() {
     </>
   )
 }
+**/
 
-export default App
+
+<>
+  <h1>Todo List</h1>
+  <ul>
+    {todoList.map(todo => (
+      <li key={todo.id}>{todo.title}</li>
+    ))}
+  </ul>
+</>
+ );
+}
+
+
+export default App;
+
